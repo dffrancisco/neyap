@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { onMounted, reactive } from "vue";
-import serviceAdicionarContato from "../services/adicionarContato.service";
-import toast from "../plugins/toast";
+// import serviceAdicionarContato from " ../../services/adicionarContato.service";
+import serviceAdicionarContato from "@/services/adicionarContato.service";
+import toast from "@/plugins/toast";
 
 const emits = defineEmits(["closeModal"]);
 

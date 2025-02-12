@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { state } from "./App";
-import ModalAddContato from "./components/ModalAddContato.vue";
+import state from "./store/storeGlobal";
 
 onMounted(() => {
+  console.log("entremos no app");
   window.addEventListener("message", (event) => {
     if (event.data) {
       let dados = JSON.parse(event.data);
@@ -16,19 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="d-flex justify-center pa-4">
-    <v-btn color="primary" @click="state.modalAddContato = true">
-      Novo Contato <v-icon class="ml-2">mdi-account-plus</v-icon>
-    </v-btn>
-  </div>
-
-  <v-dialog persistent v-model="state.modalAddContato" max-width="400">
-    <ModalAddContato
-      :idVendedor="state.idVendedor"
-      :inboxId="state.inboxId"
-      @closeModal="state.modalAddContato = false"
-    />
-  </v-dialog>
+  <router-view></router-view>
 </template>
 
 <style>
