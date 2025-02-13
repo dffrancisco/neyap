@@ -7,11 +7,12 @@ const modal = ref(false);
 </script>
 
 <template>
-  <div class="d-flex justify-center pa-4">
-    <v-btn color="primary" @click="modal = true">
-      Novo Contato <v-icon class="ml-2">mdi-account-plus</v-icon>
-    </v-btn>
-  </div>
+  <!-- <div class="d-flex justify-center pa-4"> -->
+  <v-btn @click="modal = true">
+    <v-icon class="mr-2">mdi-account-plus</v-icon>
+    Novo Contato
+  </v-btn>
+  <!-- </div> -->
 
   <v-dialog persistent v-model="modal" max-width="400">
     <ModalAddContato
