@@ -95,7 +95,12 @@ onMounted(() => {
             ></v-switch> -->
           </div>
 
-          <v-btn variant="text" color="mmp">Editar</v-btn>
+          <v-btn
+            variant="text"
+            :to="'lembretes/' + item.id_lembrete"
+            color="mmp"
+            >Editar</v-btn
+          >
 
           <div>
             <h5>Ligado</h5>
