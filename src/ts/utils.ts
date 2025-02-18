@@ -667,6 +667,8 @@ export const dataMysql = (dataString: any) => {
 
   return `${dia}/${mes}/${ano} ${hora}:${minuto}`;
 };
+
+
 export const dataMysqlDM_HM = (dataString: any) => {
 
   if (dataString == undefined)
@@ -701,6 +703,12 @@ export const retornarDataAtualDMY = (dataString: any) => {
 export const dataMysqlData = (dataString: any) => {
 
   return dataMysql(dataString).split(' ')[0];
+
+};
+export const dataMysqlHora = (dataString: any) => {
+  console.log(dataMysql(dataString).split(' '));
+
+  return dataMysql(dataString).split(' ')[1];
 
 };
 
@@ -792,6 +800,7 @@ export default {
   dataMysqlDM_HM,
   dataIsoSql,
   dataMysqlData,
+  dataMysqlHora,
   dateUSA,
   validaCNPJ,
   formatarPlaca,
